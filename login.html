@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.body{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	display: grid;
+	height: 100%;
+}
+.header-content{
+	grid-area: header;
+	font-weight: bold;
+	align-self: end;
+	justify-self: start;
+	margin: 0;
+}
+.content{
+	display: grid;
+	height: 100%;
+	grid-template-areas: 'username username' 'password password';
+	justify-items: center;
+	align-items: center;
+	grid-area: content;
+	background: #9395D3;
+	color: #ffffff;
+}
+.form-row{
+	padding: 1em;
+}
+label {
+	margin-right: 1em;
+	font-size: 2em;
+}
+input {
+	font-size: 2em;
+}
+.username{
+	grid-area: username;
+}
+.password{
+	grid-area: password;
+}
+td{
+	padding: 0.5em;
+}
+.form-button{
+	display: block;
+	margin: auto;
+	padding: 0.5em;
+	width: 30%;
+	background: #9ea0d7;
+  	border: 1px solid #8587cd;
+  	box-shadow: 0px 2px 0 #8183cc, 2px 4px 6px #8c8ed0;
+	color: white;
+  	font-weight: 900;
+	font-size: 1.5em;
+  	letter-spacing: 1px;
+	-moz-transition: all 150ms linear;
+	-o-transition: all 150ms linear;
+	-webkit-transition: all 150ms linear;
+  	transition: all 150ms linear;
+}
+.form-button:hover{
+	 background: #8e90d1;
+  	border: 1px solid rgba(0, 0, 0, 0.05);
+  	box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+  	color: #d4d5ee;
+  	text-decoration: none;
+  	text-shadow: -1px -1px 0 #7173c5;
+	-moz-transition: all 250ms linear;
+	-o-transition: all 250ms linear;
+	-webkit-transition: all 250ms linear;
+  	transition: all 250ms linear;
+}
+.form-button:active{
+	transform: scale(0.99);
+}
+.footer{
+	grid-area: footer;
+	background: #f0f0f0f0;
+}
+.grid-container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:
+    'header header header header header'
+    'content content content content content'
+    'footer footer footer footer footer';
+ margin: 0;
+ font-family: Calibri;
+}
+.grid-item{
+	margin: 0;	
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item header">
+		<h1 class="header-content"> L O G I N </h1>
+</div>
+  <form class="grid-item content" method="post" action="#">
+			<table>
+			<tr class="form-row">
+			<td><label for="username">Username</label></td>
+			<td><input type="text" name="username" /></td>
+			</tr>
+			<tr class="form-row">
+			<td><label for="password">Password   </label></td>
+			<td><input type="text" name="password" /></td>
+			</tr>
+			<tr class="form-row">
+			<td colspan='2' ><button type="submit" class='form-button'>Login</button></td>
+			</tr>
+			</table>
+</form>
+  <div class="grid-item footer"></div>
+</div>
+</body>
+</html>
