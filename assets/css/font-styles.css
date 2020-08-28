@@ -1,0 +1,57 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+    font-family: "Montserrat-Black";
+  
+    src: url("./fonts/Montserrat-Black.ttf") format("ttf") /* Legacy html */
+      url("./fonts/Montserrat-Black.svg") format("svg"), /* Legacy iOS */
+      url("./fonts/Montserrat-Black.woff") format("woff"), /* Modern Browsers */
+      url("./fonts/Montserrat-Black.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+font-family: "Montserrat-Bold";
+
+src: url("./fonts/Montserrat-Bold.ttf") format("ttf"), /* Legacy html */
+    url("./fonts/Montserrat-Bold.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/Montserrat-Bold.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/Montserrat-Bold.woff2") format("woff2"); /* Modern Browsers */
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-BoldItalic";
+  
+    src: url("./fonts/Montserrat-BoldItalic.ttf") format("ttf"), /* Legacy html */
+      url("./fonts/Montserrat-BoldItalic.svg") format("svg"), /* Legacy iOS */
+      url("./fonts/Montserrat-BoldItalic.woff") format("woff"), /* Modern Browsers */
+      url("./fonts/Montserrat-BoldItalic.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-Italic";
+  
+    src: url("./fonts/Montserrat-Italic.ttf") format("ttf"), /* Legacy html */
+      url("./fonts/Montserrat-Italic.svg") format("svg"), /* Legacy iOS */
+      url("./fonts/Montserrat-Italic.woff") format("woff"), /* Modern Browsers */
+      url("./fonts/Montserrat-Italic.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+  
+    src: url("./fonts/Montserrat-Regular.ttf") format("ttf"), /* Legacy html */
+      url("./fonts/Montserrat-Regular.svg") format("svg"), /* Legacy iOS */
+      url("./fonts/Montserrat-Regular.woff") format("woff"), /* Modern Browsers */
+      url("./fonts/Montserrat-Regular.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
