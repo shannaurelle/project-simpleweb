@@ -2,14 +2,53 @@ body{
     margin:0;
     padding:0;
     font-family: Monserrat-Black, Arial, sans-serif;
-    background-color: #5559b4;
-    color: white;
+    background-color: white;
+    color: #5558b4;
     display: grid;
     grid-template-rows: auto 1fr;
 }
-.navbar{
-    
+.navbar{ 
+    background-color: #5558b4; 
+    color: white; 
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-items: center;
 }
-.navbar-title{
+.navbar-title{ display: inline; grid-column: 1 / span 2; margin: 0; padding: 0;}
+.navbar-link{ 
+    display: inline; 
+    font-size: 1.5em;
+    font-family: Monserrat-Black, Arial, sans-serif; 
+    font-weight: bold;
+    grid-column: 3 / span 1;
+    text-decoration: none;
+    color: white; 
+}
+.navbar-searchbar{ 
+    grid-column: 4 / span 7;
+    font-size: 1.5em;
+}
+.navbar-searchbar > input{
+    outline: none; 
+    border: none; 
+    border-radius: 10px;
+    color: #5558b4;
+    padding: 5px;
+    font-size: 1em;
+}
+.navbar-searchbar-button{ 
+    border-radius: 10px; 
+    border: none;
+}
+.navbar-button-logout{ 
+    border-radius: 10px; 
+    border: none;
+    grid-column: 11 / span 1;
+}
+.navbar-button-icon{ filter: invert(35%) sepia(16%) saturate(2274%) hue-rotate(200deg) brightness(99%) contrast(90%); }
 
-}
+.subnavbar{ background-color: #6F72E9; color: white; padding: 1em;}
+.subnavbar-link{ text-decoration: none; color: white; margin-left: 25px;}
+
+.content{ background-color: white; color: #5558b4; }
