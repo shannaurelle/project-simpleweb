@@ -22,12 +22,21 @@ body{
     font-family: Monserrat-Black, Arial, sans-serif; 
     font-weight: bold;
     grid-column: 3 / span 1;
-    text-decoration: none;
+    border: none;
+    outline: none;
+    position: relative;
+    bottom: 4px;
+
+    background-color: inherit;
     color: white; 
+    
+}
+.navbar-link:active{ 
+    transform: scale(0.90);
+    transition: all 250ms linear;
 }
 .navbar-searchbar{ 
     grid-column: 4 / span 7;
-    font-size: 1.5em;
 }
 .navbar-searchbar > input{
     outline: none; 
@@ -36,17 +45,32 @@ body{
     color: #5558b4;
     padding: 5px;
     font-size: 1em;
+    width: 50vw;
+    position: relative;
+    bottom: 5px;
 }
 .navbar-searchbar-button{ 
     border-radius: 10px; 
     border: none;
+    outline: none;
+    background-color: inherit;
+    box-shadow: 0px 0px 0px 1px white;
+    margin-left:10px;
 }
-.navbar-button-logout{ 
-    border-radius: 10px; 
-    border: none;
+.navbar-searchbar-button:active{ 
+    box-shadow: none;
+}
+.navbar-link-logout{ 
+    display: inline; 
+    font-size: 1.5em;
+    font-family: Monserrat-Black, Arial, sans-serif;
+    font-weight: bold;
     grid-column: 11 / span 1;
+
+    text-decoration: none;
+    color: white;
 }
-.navbar-button-icon{ filter: invert(35%) sepia(16%) saturate(2274%) hue-rotate(200deg) brightness(99%) contrast(90%); }
+.navbar-button-icon{ filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%); }
 
 .subnavbar{ background-color: #6F72E9; color: white; padding: 1em;}
 .subnavbar-link{ text-decoration: none; color: white; margin-left: 25px;}
