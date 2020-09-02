@@ -361,7 +361,7 @@ input{
 <body>
 <div class="grid-container">
 	<nav class='header'>
-		<li class="header-item"><a href="#" class="search">Search</a></li>
+		<li class="header-item"><a href="search.html" class="search">Search</a></li>
 		<li class="header-item">
 			<form method="post" action="new_cart.php">
 			<a href="#" class="new-cart" onclick="show()">New Cart</a>
@@ -379,7 +379,7 @@ input{
 			$sql = "SELECT * FROM carts";
 			$query = mysqli_query($con,$sql);
 			while($result = mysqli_fetch_assoc($query)){
-				echo '<li class="col-left-item"><a href="master.php?ci='.$result['id'].
+				echo '<li class="col-left-item"><a href="master.php?cart_id='.$result['id'].
 				'" >'.$result['cart_name'].'</a></li>';
 			}
 		?>
@@ -387,7 +387,7 @@ input{
 	</div>
 	<div class="col-center">
 		<div class="col-center-item">
-		<h1> Cart <?php if(isset($_GET['ci'])){ echo $_GET['ci'];} ?></h1>
+		<h1> Cart <?php if(isset($_GET['cart_id'])){ echo $_GET['cart_id'];} ?></h1>
 		</ul>
 		<label for="name">Name of Buyer: </label>
 		<h3 style="display: inline;">Juan Dela C. Cruz</h3>
@@ -415,6 +415,7 @@ input{
 							echo '<option value="'.$result['item_name'].'">'.$result['item_name'].'</option>';
 						}
 						else{
+							echo '<option>'."no items found".'</option>';
 						}
 						?>
 						</datalist>
