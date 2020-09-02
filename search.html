@@ -8,6 +8,7 @@
 	
 	<link href="assets/css/font-styles.css" rel="stylesheet">
 	<link href="assets/css/searchpage-styles.css" rel="stylesheet">
+	
 </head>
 
 <body class="grid">
@@ -20,12 +21,12 @@
 
 	<button id="tools" href="search.html" class="navbar-link" onclick="showsubNavbar()">Tools</button>
 
-	<span class="navbar-searchbar">
+	<form class="navbar-searchbar" method="POST" action="search.php">
 		<input type="text" class="navbar-searchbar-input">
 		<button type="submit" class="navbar-searchbar-button">
 			<img class="navbar-button-icon" src="assets/svg/search-24px.svg"/>
 		</button>
-	</span>
+	</form>
 
 	<a href="logout.php" class="navbar-link-logout">Logout</a>
 
