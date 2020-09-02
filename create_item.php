@@ -31,7 +31,7 @@ $price = filter_var($_POST['username'],FILTER_SANITIZE_STRING);
 $qty_available = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
 $unit_measurement =  filter_var($_POST['access'],FILTER_SANITIZE_STRING);
 $unit_packaging = filter_var($_POST['username'],FILTER_SANITIZE_STRING);
-$qty_per_packaging = filter_var($_POS  T['username'],FILTER_SANITIZE_STRING);
+$qty_per_packaging = filter_var($_POST['username'],FILTER_SANITIZE_STRING);
 $item_img_path = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
 $date_created =  filter_var($_POST['access'],FILTER_SANITIZE_STRING);
 $isUpdate = ($_SESSION['edit']==1) ? TRUE : FALSE;
