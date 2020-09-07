@@ -59,6 +59,7 @@
 		<li class="header-item"><button href="#" class="link button-link" data-id="addItem">Add item</button></li>
 		<li class="header-item"><a href="downloadTransactions.php">Download Transactions</a></li>
 		<li class="header-item"><a href="downloadPurchases.php">Download Purchases</a></li>
+		<li class="header-item"><a href="downloadProducts.php">Download List of Items</a></li>
 		<li class="header-item"><a href="logout.php">Logout</a></li>
 	</nav>
 
