@@ -18,14 +18,30 @@
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  .modal-content-results{ 
+    background-color: #5558b4; 
+    color: white; 
+    padding: 2em; 
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+  .modal-content-add{ 
+    background-color: #5558b4; 
+    color: white; 
+    padding: 1em;
+    margin-right: 1em; 
+    display: grid;
+    grid-template-columns: auto 1fr auto;
   }
   
   /* The Close Button */
   .close {
     color: #5558b4;
     background-color: white;
-    float: right;
     font-size: 1em;
     font-weight: bold;
     font-family: Monserrat-Black, Arial, Helvetica, sans-serif;
@@ -47,15 +63,24 @@
     transition: all 250ms linear;
   }
 
-  .modal-content-results{ 
-    background-color: #5558b4; 
-    color: white; 
-    padding: 1em; 
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: auto 1fr auto;
-}
+  .close-text{
+    color: #5558b4;
+  }
 
 .product-details{ display: grid; grid-template-columns: auto auto; }
 
 .product-details-key{ margin-right: 10px; }
+
+.product-details-key input{
+  text-align: center;
+	margin:auto;
+	font-weight: 600;
+	font-size: 1em;
+	border-radius: 0.1em;
+}
+
+.left-content{
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+}
