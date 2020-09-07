@@ -55,9 +55,9 @@
 			<a href="#" class="new-cart" onclick="show()">New Cart</a>
 			</form>
 		</li>
-		<li class="header-item"><a href="#" class="modal-link" data-id="myModal">Edit item</a></li>
-		<li class="header-item"><a href="#" class="modal-link" data-id="add-modal">Add item</a></li>
-		<li class="header-item"><a href="#" class="modal-link" data-id="finished-modal">Finished Carts</a></li>
+		<li class="header-item"><button href="#" class="link">Edit item</button></li>
+		<li class="header-item"><button href="#" class="link">Add item</button></li>
+		<li class="header-item"><button href="#" class="link">Finished Carts</button></li>
 		<li class="header-item"><a href="logout.php">Logout</a></li>
 	</nav>
 
