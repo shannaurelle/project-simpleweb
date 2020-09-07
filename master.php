@@ -5,9 +5,9 @@
 <script src="assets/js/jquery-3.5.1-min.js"></script>
 <script src="assets/js/tableHTMLExport.js"></script>
 
-
-<link href="assets/css/modal-styles.css" rel="stylesheet">
 <link href="assets/css/master-styles.css" rel="stylesheet">
+<link href="assets/css/modal-styles.css" rel="stylesheet">
+
 <?php
 	$con = mysqli_connect("localhost","root","","projectSimple");
     if(mysqli_connect_errno()){
@@ -55,9 +55,10 @@
 			<a href="#" class="new-cart" onclick="show()">New Cart</a>
 			</form>
 		</li>
-		<li class="header-item"><button href="#" class="link">Edit item</button></li>
-		<li class="header-item"><button href="#" class="link">Add item</button></li>
-		<li class="header-item"><button href="#" class="link">Finished Carts</button></li>
+		<li class="header-item"><button href="#" class="link button-link" data-id="editItem">Edit item</button></li>
+		<li class="header-item"><button href="#" class="link button-link" data-id="addItem">Add item</button></li>
+		<li class="header-item"><a href="downloadTransactions.php">Download Transactions</a></li>
+		<li class="header-item"><a href="downloadPurchases.php">Download Purchases</a></li>
 		<li class="header-item"><a href="logout.php">Logout</a></li>
 	</nav>
 
@@ -176,9 +177,12 @@
 				</tr>
 			</tbody>
 		<table>
-		<div class="btn-wrapper btn-wrapper-green"><button type="submit" class="btn btn-gradient-green" id="exportBtn">Export to Excel</button></div>
+		<div class="btn-wrapper btn-wrapper-green"><button type="submit" class="btn btn-gradient-green" id="exportBtn">Export Table to Excel</button></div>
 	</div>
 </div>
+
+<?php require('addModal.html'); ?>
+<?php require('editModal.html'); ?>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -229,8 +233,9 @@
 </body>
 
 
-<!--JQuery-->
+<!--JQuery and additional scripts-->
 <script src="assets/js/modal.js"></script>
+<script src="assets/js/imgUpload.js"></script>
 <script type="text/javascript">
 	function compute(){
 		var total = Number(document.getElementById("total").innerHTML);
