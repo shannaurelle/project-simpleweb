@@ -1,0 +1,83 @@
+<!-- The Modal -->
+<div id="addItem" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        
+        
+
+        <div class="modal-content-results">
+        
+            <form method="POST" action="add-item.php" enctype="multipart/form-data">
+
+            <div class="left-content">
+                <img id="output" class="content-results-img" src="assets/img/no-image.png" width="200" height="204" />
+
+                <p style="text-align: center;"><label for="file" style="cursor: pointer;" class="image-text">Upload Image</label></p>
+
+                <input type="submit" class="button-submit" style="margin: auto;" value="Submit Product Details"/>
+            
+            </div>
+
+            <input type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+            
+            <div class="content-results-description">
+    
+                <h3 class="content-results-description-name" style="margin: 0; padding: 0;">Add Product <span class="close">X</span></h3>
+    
+                <div class="product-details">
+
+                        <span class="product-details-key">
+                            <p><label for="name">Product Name:</label></p>
+                            <input type="text" class="product-details-value">
+                        </span>
+
+                        <span class="product-details-key">
+                            <p><label for="description">Product Description:</label> </p>
+                            <input type="text" class="product-details-value">
+                        </span>
+    
+                        <span class="product-details-key">
+                            <p><label for="location">Location:</label> </p>
+                            <input type="text" class="product-details-value">
+                        </span>
+
+                        <span class="product-details-key">
+                            <p><label for="supplier">Supplier:</label> </p>
+                            <input type="text" class="product-details-value">
+                        </span>
+
+                        <span class="product-details-key">
+                            <p><label for="stocks">Stocks available:</label> </p>
+                            <input type="text" class="product-details-value">
+                        </span>
+
+                        <span class="product-details-key">
+                            <p><label for="packaging">Packaging:</label> </p>
+                            <input type="text" class="product-details-value">
+                        </span>
+
+                        <span class="product-details-key">
+                            <p><label for="unit">Unit:</label></p> 
+                            <input type="text" class="product-details-value">
+                        </span>
+
+                        <span class="product-details-key">
+                            <p><label for="unitPerPackaging">Unit per Packaging:</label></p> 
+                            <input type="text" class="product-details-value">
+                        </span>
+                        
+                </div>
+
+            </div>
+    
+            </form>
+
+            
+        </div>
+
+        
+
+    </div>
+    
+    </div>
