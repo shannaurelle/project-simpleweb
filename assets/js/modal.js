@@ -1,7 +1,8 @@
 function clearImageOutput(){
     console.log("Clear Image!");
-    var image = document.getElementById('output');
+    let image = document.getElementById('output');
     image.src = "assets/img/no-image.png";
+    document.getElementById('file').value = "";
 }
 
 var modals = document.getElementsByClassName('modal');
@@ -10,7 +11,7 @@ var modals = document.getElementsByClassName('modal');
 var btn = document.getElementsByClassName("link");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("close");
 
 // When the user clicks on the button, open the modal
 for(let i = 0; i < btn.length; i++){
@@ -21,11 +22,13 @@ for(let i = 0; i < btn.length; i++){
     }
 }
 
+for(let i = 0; i < span.length; i++){
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    for(let i = 0; i < modals.length; i++){
-        modals[i].style.display = "none";
-        clearImageOutput();
+    span[i].onclick = function() {
+        for(let i = 0; i < modals.length; i++){
+            modals[i].style.display = "none";
+            clearImageOutput();
+        }
     }
 }
 
