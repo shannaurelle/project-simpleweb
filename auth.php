@@ -6,7 +6,7 @@ if(mysqli_connect_errno()){
 }
 session_start();
 $username = filter_var($_POST['username'],FILTER_SANITIZE_STRING);
-$passwd = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
+$password = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
 
 $stmt = mysqli_stmt_init($con);
 if(mysqli_stmt_prepare($stmt,"SELECT * FROM accounts WHERE username = ?")){
@@ -14,7 +14,8 @@ if(mysqli_stmt_prepare($stmt,"SELECT * FROM accounts WHERE username = ?")){
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     $data = mysqli_fetch_assoc($result);
-    if(password_verify($passwd,$data['password'])){
+    $database_password = $data['password'];
+    if(password_verify($password,$database_password)){
         $_SESSION['active'] == "Yes";
         if($data['access']=="Master"){
             header("Location: master.php");
