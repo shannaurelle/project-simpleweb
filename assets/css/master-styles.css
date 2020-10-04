@@ -130,7 +130,7 @@ ul{
 	margin-top: 5vh;
 	grid-template-rows: 1fr fit-content(20%);
 	grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
-	height: 90vh;
+	height: 95vh;
 	width: 100vw;
 }
 .totals, .totals-price{

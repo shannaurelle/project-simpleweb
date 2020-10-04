@@ -59,7 +59,7 @@
 		<li class="header-item"><button href="#" class="link button-link" data-id="addItem">Add item</button></li>
 		<li class="header-item"><a href="downloadTransactions.php">Download Transactions</a></li>
 		<li class="header-item"><a href="downloadPurchases.php">Download Purchases</a></li>
-		<li class="header-item"><a href="downloadProducts.php">Download List of Items</a></li>
+		<li class="header-item"><a href="downloaditemsExcel.php">Download List of Items</a></li>
 		<li class="header-item"><a href="logout.php">Logout</a></li>
 	</nav>
 
@@ -91,7 +91,7 @@
    			 	<div class="row">
      			 	<div>Particulars</div>
       				<div>Quantity</div>
-      				<div class="amount">Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      				<div class="price">Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
    			 	</div>
   			</div>
   			<div class="tbody">
@@ -115,7 +115,7 @@
 					</li>
 				</div>
       				<div><input type="number" class="number"></div>
-      				<div>150.00</div>
+      				<input type="number" class="prices" value="150.00" disabled>
     				</div>
 
     				<div class="row">
@@ -129,7 +129,7 @@
 					</datalist>
 				</div>
       				<div>14</div>
-      				<div>150.00</div>
+      				<input type="number" class="prices" value="150.00" disabled>
     				</div>
 
   				
@@ -137,7 +137,7 @@
 			<div class="thead">
 				<div class="row">
      			 	<div>Total</div>
-				<div id="total">650.50</div>
+				<div id="total"></div>
       				<div class="btn-wrapper btn-wrapper-tertiary"><button class="btn btn-tertiary" onclick=addChild()>Add item</button></div>
    			 	</div>
 
@@ -239,7 +239,15 @@
 <script src="assets/js/imgUpload.js"></script>
 <script type="text/javascript">
 	function compute(){
-		var total = Number(document.getElementById("total").innerHTML);
+		let total = 0.0;
+		let priceslist = document.querySelectorAll('.prices');
+		console.log(priceslist);
+		for (price of priceslist){
+			let value = parseFloat(price.value);
+			console.log(price.value);
+			total += parseFloat(value);
+		}
+		document.getElementById("total").innerHTML = total;
 		var cash = Number(document.getElementById("cash").value);
 		var change =  document.getElementById("change");
 		var cash_left = parseFloat(cash - total);
@@ -247,8 +255,17 @@
 	}
 	
 	function addChild(){
-		var template = "<div class='row'><div><input list='foods' name='food' id='food'/><datalist id='foods'><option value='Fried Chicken'> Fried Chicken </option><option value='Halo-halo'> Halo-halo </option><option value='Kare-kare'> Kare-kare </option><option value='Rice'> Rice </option></datalist></div><div><input type='number' class='number'></div><div>150.00</div></div>";
-		document.getElementsByClassName("tbody").innerHTML = tbody.innerHTML + template.innerHTML;
+		var template = "<div class='row'>
+		<div>
+		<input list='foods' name='food' id='food'/>
+		<datalist id='foods'>
+		<option value='Fried Chicken'> Fried Chicken </option>
+		<option value='Halo-halo'> Halo-halo </option>
+		<option value='Kare-kare'> Kare-kare </option>
+		<option value='Rice'> Rice </option></datalist>
+		</div><div><input type='number' class='number'></div><div class='prices'>150.00</div></div>";
+		let tbody = document.querySelector(".tbody")
+		tbody.innerHTML = tbody.innerHTML + template;
 	}
 
 $(document).ready(function(){
